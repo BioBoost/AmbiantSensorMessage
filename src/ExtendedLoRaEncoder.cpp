@@ -1,4 +1,4 @@
-#include "ExtendedSerialize.h"
+#include "ExtendedLoRaEncoder.h"
 
 void ExtendedLoRaEncoder::writeTemperature(double temperature)
 {
