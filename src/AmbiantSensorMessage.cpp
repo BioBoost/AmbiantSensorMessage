@@ -3,9 +3,9 @@
 LoRaMessage loRaMessage;
 
 namespace AmbiantSensorMessage {
-    void AmbiantSensorMessage::addTemperature(int temperature)
+    LoRaMessage& AmbiantSensorMessage::addTemperature(int temperature)
     {
-        loRaMessage.addUint16(temperature);
+        return loRaMessage.addUint16(temperature);
     }
 
     void AmbiantSensorMessage::addHumidity(int humidity)
