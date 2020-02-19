@@ -10,5 +10,5 @@ class ExtendedLoRaMessage: public LoRaMessage{
         ExtendedLoRaMessage& addPressure(double pressure);
         ExtendedLoRaMessage& addPM(uint16_t pm);
 
-        ExtendedLoRaEncoder reallocBuffer(int delta);
+        ExtendedLoRaEncoder reallocBuffer2(int delta);
 };
