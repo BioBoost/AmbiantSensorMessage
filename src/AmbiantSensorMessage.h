@@ -9,7 +9,7 @@ namespace AmbiantSensorMessage {
             AmbiantSensorMessage();
 
             void addHumidity(int humidity);
-            LoRaMessage& addTemperature(int temperature);
+            AmbiantSensorMessage& addTemperature(int temperature);
             void addPressure(int pressure);
             void addPM(int pm);
 
