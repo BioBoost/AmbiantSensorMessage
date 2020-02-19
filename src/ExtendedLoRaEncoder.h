@@ -10,5 +10,4 @@ class ExtendedLoRaEncoder: public LoRaEncoder
         void writeHumidity(double humidity);
         void writePressure(double pressure);
         void writePM(uint16_t pm);
-
 };

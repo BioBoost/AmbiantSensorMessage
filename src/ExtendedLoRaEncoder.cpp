@@ -7,22 +7,22 @@ void ExtendedLoRaEncoder::writeTemperature(double temperature)
       temperatureInt = ~-temperatureInt;
       temperatureInt = temperatureInt + 1;
     }
-    writeUint16(temperatureInt);
+    LoRaEncoder::writeUint16(temperatureInt);
 }
 
 void ExtendedLoRaEncoder::writeHumidity(double humidity)
 {
     int16_t humidityInt = (int16_t) (humidity *100);
-    writeUint16(humidityInt);
+    LoRaEncoder::writeUint16(humidityInt);
 }
 
 void ExtendedLoRaEncoder::writePressure(double pressure)
 {
     int16_t pressureInt = (int16_t) (pressure *100);
-    writeUint16(pressureInt);
+    LoRaEncoder::writeUint16(pressureInt);
 }
 
 void ExtendedLoRaEncoder::writePM(uint16_t pm)
 {
-    writeUint16(pm);
+    LoRaEncoder::writeUint16(pm);
 }
