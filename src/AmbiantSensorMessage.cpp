@@ -1,12 +1,9 @@
 #include "AmbiantSensorMessage.h"
 
-LoRaMessage loRaMessage;
-
 namespace AmbiantSensorMessage {
-    AmbiantSensorMessage& AmbiantSensorMessage::addTemperature(int temperature)
+    void AmbiantSensorMessage::addTemperature(int temperature)
     {
-        loRaMessage.addUint16(temperature);
-        return *this;
+        message.addUint16(temperature);
     }
 
     void AmbiantSensorMessage::addHumidity(int humidity)
@@ -16,26 +13,28 @@ namespace AmbiantSensorMessage {
         } else if (humidity > 100) {
             humidity = 100;
         }
-        loRaMessage.addUint16(humidity);
+        message.addUint16(humidity);
     }
 
     void AmbiantSensorMessage::addPressure(int pressure)
     {
-        loRaMessage.addUint16(pressure);
+        message.addUint16(pressure);
     }
 
     void AmbiantSensorMessage::addPM(int pm)
     {
-        loRaMessage.addUint16(pm);
+        message.addUint16(pm);
     }
 
     uint8_t* AmbiantSensorMessage::getMessage()
     {
-        return loRaMessage.getMessage();
+        return message.getMessage();
     }
-    
+
     uint8_t AmbiantSensorMessage::getLength()
     {
-        return loRaMessage.getLength();
+        return message.getLength();
     }
+
+    
 }
