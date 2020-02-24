@@ -6,8 +6,6 @@ namespace ParticulaLora {
     class AmbiantSensorMessage
     {
         public:
-            AmbiantSensorMessage();
-
             void addHumidity(int humidity);
             void addTemperature(int temperature);
             void addPressure(int pressure);
