@@ -10,8 +10,8 @@ namespace ParticulaLora {
     {
         if (humidity < 0) {
             humidity = 0;
-        } else if (humidity > 100) {
-            humidity = 100;
+        } else if (humidity > 10000) {
+            humidity = 10000;               // 100% with 2 decimal places
         }
         message.addUint16(humidity);
     }
