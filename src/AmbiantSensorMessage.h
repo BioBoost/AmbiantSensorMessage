@@ -2,7 +2,7 @@
 
 #include "LoraMessage.h"
 
-namespace AmbiantSensorMessage {
+namespace ParticulaLora {
     class AmbiantSensorMessage
     {
         public:

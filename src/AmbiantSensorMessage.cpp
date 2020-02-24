@@ -1,6 +1,6 @@
 #include "AmbiantSensorMessage.h"
 
-namespace AmbiantSensorMessage {
+namespace ParticulaLora {
     void AmbiantSensorMessage::addTemperature(int temperature)
     {
         message.addUint16(temperature);
