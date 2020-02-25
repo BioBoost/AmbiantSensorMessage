@@ -6,10 +6,10 @@ namespace ParticulaLora {
     class AmbiantSensorMessage
     {
         public:
-            void addHumidity(double humidity);
-            void addTemperature(double temperature);
-            void addPressure(double pressure);
-            void addPM(double pm);
+            void addHumidity(double);
+            void addTemperature(double);
+            void addPressure(double);
+            void addPM(double);
             uint8_t* getMessage();
             uint8_t getLength();
         
