@@ -16,8 +16,8 @@ namespace ParticulaLora {
         int16_t humidity = (int16_t) (value * 100);
         if (humidity < 0) {
             humidity = 0;
-        } else if (humidity > 100) {
-            humidity = 100;
+        } else if (humidity > 10000) {
+            humidity = 10000;
         }
         message.addUint16(humidity);
     }
