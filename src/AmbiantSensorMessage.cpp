@@ -1,12 +1,12 @@
 #include "AmbiantSensorMessage.h"
 
 namespace ParticulaLora {
-    void AmbiantSensorMessage::addTemperature(int temperature)
+    void AmbiantSensorMessage::addTemperature(double temperature)
     {
         message.addUint16(temperature);
     }
 
-    void AmbiantSensorMessage::addHumidity(int humidity)
+    void AmbiantSensorMessage::addHumidity(double humidity)
     {
         if (humidity < 0) {
             humidity = 0;
@@ -16,12 +16,12 @@ namespace ParticulaLora {
         message.addUint16(humidity);
     }
 
-    void AmbiantSensorMessage::addPressure(int pressure)
+    void AmbiantSensorMessage::addPressure(double pressure)
     {
         message.addUint16(pressure);
     }
 
-    void AmbiantSensorMessage::addPM(int pm)
+    void AmbiantSensorMessage::addPM(double pm)
     {
         message.addUint16(pm);
     }

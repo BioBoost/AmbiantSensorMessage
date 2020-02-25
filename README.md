@@ -23,11 +23,11 @@ Remember that you will also need the SimpleLoRaWAN library to actually send your
 
 int main(void)
 {
-    int temperature = 2264;
-    int humidity = 9550;
-    int pressure = 1564;
-    int pm25 = 999;
-    int pm10 = 245;
+    double temperature = 22.64;  // value in °C
+    double humidity = 9.55;      // value in %
+    double pressure = 1013.5;    // value in hPa
+    double pm25 = 12.3;          // value in µg/m³
+    double pm10 = 23.4;          // value in µg/m³
 
     while(true) {
         SimpleLoRaWAN::Node node(keys, pins);
