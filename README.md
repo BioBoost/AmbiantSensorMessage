@@ -67,7 +67,6 @@ function Decoder(bytes, port) {
   var decoded = {};
 
   if (port === 1) {
-
     decoded.temperature = intToDouble(bytes[0] + bytes[1] * 256, 2)
     decoded.humidity = intToDouble(bytes[2] + bytes[3] * 256, 2)
     decoded.pressure = intToDouble(bytes[4] + bytes[5] * 256, 1)
