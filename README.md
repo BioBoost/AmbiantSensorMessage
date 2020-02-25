@@ -47,7 +47,7 @@ int main(void)
 }
 
 ```
-An AmbiantSensorMessage takes arguments of the integer type, with the payload decoder on [The Things Network console](https://console.thethingsnetwork.org/) you can adjust the precision.
+An AmbiantSensorMessage takes arguments of the double type (take a look at the example for typical values for all measurements), make sure to convert them back to double with the payload decoder on [The Things Network console](https://console.thethingsnetwork.org/) (they are sent to TTN as integer values).
 
 ## Example TTN Payload Decoder
 
