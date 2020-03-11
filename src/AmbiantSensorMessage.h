@@ -1,6 +1,6 @@
 #pragma once
 
-#include "LoraMessage.h"
+#include "LoRaMessage.h"
 
 namespace ParticulaLora {
     class AmbiantSensorMessage
