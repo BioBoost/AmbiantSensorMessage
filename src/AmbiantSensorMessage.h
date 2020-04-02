@@ -10,6 +10,7 @@ namespace ParticulaLora {
             void addTemperature(double);
             void addPressure(double);
             void addPM(double);
+            void addError(int);
             uint8_t* getMessage();
             uint8_t getLength();
         

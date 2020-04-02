@@ -40,6 +40,11 @@ namespace ParticulaLora {
         message.addUint16(pm);
     }
 
+    void AmbiantSensorMessage::addError(int value)
+    {
+        message.addUint16(value);
+    }
+
     uint8_t* AmbiantSensorMessage::getMessage()
     {
         return message.getMessage();
