@@ -42,7 +42,7 @@ namespace ParticulaLora {
 
     void AmbiantSensorMessage::addError(int value)
     {
-        message.addUint16(value);
+        message.addUint8(value);
     }
 
     uint8_t* AmbiantSensorMessage::getMessage()
