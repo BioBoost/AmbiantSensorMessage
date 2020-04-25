@@ -40,9 +40,9 @@ namespace Particula {
         message.addUint16(pm);
     }
 
-    void AmbiantSensorMessage::addError(int value)
+    void AmbiantSensorMessage::addStatus(int value)
     {
-        message.addUint8(value);
+        message.addUint16(value);
     }
 
     uint8_t* AmbiantSensorMessage::getMessage()

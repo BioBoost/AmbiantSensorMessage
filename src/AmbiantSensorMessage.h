@@ -10,7 +10,7 @@ namespace Particula {
             void addTemperature(double);
             void addPressure(double);
             void addPM(double);
-            void addError(int);
+            void addStatus(int);
             uint8_t* getMessage();
             uint8_t getLength();
         
