@@ -11,6 +11,7 @@ namespace Particula {
             void addPressure(double);
             void addPM(double);
             void addStatus(int);
+            void addVersionNumber(double);
             uint8_t* getMessage();
             uint8_t getLength();
         
