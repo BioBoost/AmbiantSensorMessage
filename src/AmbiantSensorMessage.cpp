@@ -46,7 +46,7 @@ namespace Particula {
     }
 
     void AmbiantSensorMessage::addVersionNumber(double version) {
-        int16_t versionNumber = (int16_t) (version * 100);
+        int16_t versionNumber = (int16_t) (version * 10);
         message.addUint8(versionNumber);
     }
 
