@@ -1,21 +1,23 @@
 # Mbed LoRaWAN Ambiant Sensor Message
 
-This is a libray that makes use of the [LoRaMessage class](https://github.com/sillevl/mbed-lorawan-serialization) to be able to send messages to the LoRaWAN network with valid temperature, humidity, pressure and pm (particle measure) data.
+This is a libray that makes use of the [LoRaMessage class](https://github.com/sillevl/mbed-lorawan-serialization) to be able to send messages to the LoRaWAN network with valid temperature, humidity, pressure, pm10 and 2.5 (particle measure) data and hardware status and a firmware version number.
 
 After setting up your message, to send it over the LoRaWAN network you can make use of the [SimpleLoraWAN Library](https://github.com/sillevl/mbed-Simple-LoRaWAN).
 For more information on the settings, pinouts, and more, you can take a look at the [LoraWAN Shield Example](https://github.com/sillevl/lorawan-shield-example).
 
 ## Getting started
+
 To add this library to your mbed project, use the following commands with the mbed-cli in your projects directory:
-```
-mbed add <https link to this repo>
+
+```powershell
+mbed add https://github.com/vives-projectwerk-2-2020/AmbiantSensorMessage.git
 mbed deploy
 ```
-The first line adds the library to your project, the second downloads the actual files so you can start using the AmbiantSensorMessage class.
 
 Remember that you will also need the SimpleLoRaWAN library to actually send your data.
 
 ## Example
+
 ```c++
 #include "Simple-LoRaWAN.h"
 #include "AmbiantSensorMessage.h"
@@ -47,9 +49,10 @@ int main(void)
 }
 
 ```
+
 An AmbiantSensorMessage takes arguments of the double type (take a look at the example for typical values for all measurements), make sure to convert them back to double with the payload decoder on [The Things Network console](https://console.thethingsnetwork.org/) (they are sent to TTN as integer values).
 
-## Example TTN Payload Decoder
+## Basic example TTN Payload Decoder
 
 ```javascript
 function intToDouble(value, places) {
@@ -76,9 +79,6 @@ function Decoder(bytes, port) {
   return decoded;
 }
 ```
-
-
-
 
 ## UML Diagrams
 
